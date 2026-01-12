@@ -1,3 +1,4 @@
 *.json
 vendor/
 *.lock
+*.DS_Store
