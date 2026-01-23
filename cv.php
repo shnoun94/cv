@@ -3,82 +3,177 @@
 
 <head>
     <meta charset="UTF-8">
+    <link href="cv.css" rel="stylesheet" />
     <title>
         CV
     </title>
 </head>
+
 <body>
-    <form name="formulaire" action="/ma-page-de-traitement" onsubmit="return validation()" method="post" >Informations
-    <ul>
-        <li>
-            <label for="Nom">Nom :</label>
-            <input type="text" id="Nom" name="Nom" />
-        </li>
-        <li>
-            <label for="prénom">Prénom :</label>
-            <input type="text" id="prénom" name="user_name" />
-        </li>
-        <li>
-            <label for="titre">Titre :</label>
-            <input type="text" id="titre" name="user_titre" />
-        </li>
-        <li>
-            <label for="numéro">Numéro :</label>
-            <input type="number" id="numéro" name="numéro" />
-        </li>
-        <li>
-            <label for="adresse">Adresse :</label>
-            <input type="text" id="adresse" name="adresse" />
-            
-        </li>
-        <li>
-            <label for="description">Description :</label>
-            <input type="text" id="description" name="user_description" />
-        </li>
-        <li>
-            <label for="compétences">Compétences :</label>
-            <select id="compétences"> name="compétences">
-                <optgroup label="compétences">
-                    <option value="HTML">HTML débutant</option>
-                    <option value="HTML">HTML intérmediaire</option>
-                    <option value="HTML">HTML expert</option>
-                    <option value="CSS">CSS débutant</option>
-                    <option value="CSS">CSS intérmediaire</option>
-                    <option value="CSS">CSS expert</option>
-                    <option value="PHP">PHP débutant</option>
-                    <option value="PHP">PHP intérmediaire</option>
-                    <option value="PHP">PHP expert</option>
-                    <option value="JavaScipt">JavaScipt débutant</option>
-                    <option value="JavaScipt">JavaScipt intérmediaire</option>
-                    <option value="JavaScipt">JavaScipt expert</option>
-                    <option value="Git & Github">Git & Github débutant</option>
-                    <option value="Git & Github">Git & Github intérmediaire</option>
-                    <option value="Git & Github">Git & Github expert</option>
-                </optgroup>
-            </select>
-        </li>
-        <li>
-            <label for="expériences">Expériences :</label>
-            <input type="text" id="intitulé du poste" name="poste" /><br>
-            <input type="text" id="entreprise" name="entrprise" /><br>
-            <input type="date" id="début" name="début" /><br>
-            <input type="date" id="fin" name="fin" />
-        </li>
-        <li>
-            <label for="formations">Formations :</label>
-            <input type="text" id="intitulé de la formation" name="intitulé de la formation" /><br>
-            <input type="text" id="lieu" name="lieu" /><br>
-            <input type="date" id="début" name="début" /><br>
-            <input type="date" id="fin" name="fin" /><br>
-            <input type="text" id="descriptionf" name="description" /><br>
-        </li>
-    </ul>
-    <!-- <button class="téléchargement" type="button">Téléchargement</button> -->
-<div class="buttons">
-      <input type="submit" value="Envoyer" name="Envoyer" />
-      <input type="reset" value="Rénit" name="Reset" />
-    </div>    
-</form>
-    <script src="cv.js"></script>
+    <div class="display">
+        <div class="formulaire">
+            <h2>INFORMATIONS GÉNÉRALES</h2>
+            <form name="formulaire" action="cv.php" onsubmit="return validation()" method="post"
+                enctype="multipart/form-data">
+                <ul>
+                    <li>
+                        <label for="nom">Nom</label><br>
+                        <input type="text" id="nom" name="nom" />
+                    </li>
+                    <li>
+                        <label for="prénom">Prénom</label><br>
+                        <input type="text" id="prénom" name="prénom" />
+                    </li>
+                    <li>
+                        <label for="titre">Titre professionnel</label><br>
+                        <input type="text" id="titre" name="titre" />
+                    </li>
+                    <li>
+                        <label for="mail">Adresse mail</label><br>
+                        <input type="text" id="mail" name="mail" />
+                    </li>
+                    <li>
+                    <li>
+                        <label for="adresse">Adresse</label><br>
+                        <input type="text" id="adresse" name="adresse" />
+
+                    </li>
+                    <label for="numéro">Numéro</label><br>
+                    <input type="tel" id="numéro" name="numéro" />
+                    </li>
+
+                    <li>
+                        <label for="description">Description</label><br>
+                        <input type="text" id="description" name="description" />
+                    </li>
+
+                    <li>
+                </ul>
+                <section class="container">
+                    <p class="text">
+                        Compétences
+                    </p>
+                    <section class="competences">
+
+                        <input type="checkbox" id="HTML" name="HTML" value="HTML">
+                        <label for="HTML">HTML</label><br>
+                        </label>
+
+                        <input type="checkbox" id="CSS" name="CSS" value="CSS">
+                        <label for="CSS">CSS</label><br>
+                        </label>
+
+
+                        <input type="checkbox" id="PHP" name="PHP" value="PHP">
+                        <label for="PHP">PHP</label><br>
+                        </label>
+
+
+                        <input type="checkbox" id="JavaScipt" name="JavaScipt" value="JavaScipt">
+                        <label for="JavaScipt">JavaScipt</label>
+                        </label>
+                    </section>
+
+                    <li class="f">
+                        <label for="formations">Formations</label><br>
+                        <input type="text" id="intitulé de la formation" name="formation"
+                            placeholder="Intitulé de diplôme ou de la formation" /><br>
+                        <input type="text" id="lieu" name="lieu" placeholder="Établissement" /><br>
+                        <input type="date" id="début" name="début" /><br>
+                        <input type="date" id="fin" name="fin" /><br>
+                    </li>
+                </section>
+                <ul>
+                    <h2>ÉXPERIENCES PROFESSIONELLES</h2>
+                    <li>
+                        <label for="expériences">Expériences</label><br>
+                        <input type="text" id="intitulé du poste" name="poste" placeholder="Intitulé du poste" /><br>
+                        <input type="text" id="entreprise" name="entreprise" placeholder="Nom de l'entreprise" /><br>
+                        <input type="date" id="début" name="début" /><br>
+                        <input type="date" id="fin" name="fin" /><br>
+                        <input type="text" id="decription des missions" name="missions"
+                            placeholder="Decription des missions" /><br>
+                    </li>
+
+                </ul>
+                <section class="buttons">
+                    <input type="submit" value="Envoyer" name="Envoyer" />
+                    <input type="reset" value="Rénit" name="Reset" />
+                </section>
+        </div>
+        </form>
+
+        <div class="cv">
+            <div class="infos">
+                <div class="prenom"> <?php echo $_POST["nom"] . "\n" . $_POST["prénom"] . "<br/> "; ?> </div>
+                <div class="titre"> <?php echo $_POST["titre"] . "<br/>"; ?></div>
+                <div class="propos"> <?php echo "À propos de moi"; ?></div>
+                <div class="proposm"><?php echo $_POST["description"] . "<br/>"; ?> </div>
+            </div>
+            <div class="tout">
+                <div class="dis-dis">
+                    <div class="contact">Contact</div>
+                    <section class="svg-mail"><img loading="lazy" src="/svg/envelope-icon.svg" width="20" height="20"
+                            alt="mail"></section>
+                    <div class="mail"> <?php echo $_POST["mail"] . "<br/>"; ?></div>
+                    <section class="svg-tel"><img loading="lazy" src="/svg/phone-icon.svg" width="20" height="20"
+                            alt="téléphone"></section>
+                    <div class="tel"> <?php echo $_POST["numéro"] . "<br/>"; ?></div>
+                    <section class="svg-adresse"><img loading="lazy" src="/svg/maps-pin-black-icon.svg" width="20"
+                            height="20" alt="adresse"></section>
+                    <div class="adresse"> <?php echo $_POST["adresse"] . "<br/>"; ?></div>
+
+                    <div class="competence">Compétences</div>
+                    <div class="comp">
+                        <div class="html">
+                            <?php if (isset($_POST["HTML"])) {
+                                $HTML = "+HTML" . $_POST['HTML'];
+                                echo $_POST["HTML"] . "<br/>";
+                            } ?>
+                        </div>
+                        <div class="css"><?php
+                        if (isset($_POST["CSS"])) {
+                            $CSS = "+CSS" . $_POST['CSS'];
+                            echo $_POST["CSS"] . "<br/>";
+                        } ?></div>
+                        <div class="php"><?php
+                        if (isset($_POST["PHP"])) {
+                            $PHP = "+PHP" . $_POST['PHP'];
+                            echo $_POST["PHP"] . "<br/>";
+                        } ?></div>
+                        <div class="java"><?php
+                        if (isset($_POST["JavaScipt"])) {
+                            $JavaScipt = "+JavaScipt" . $_POST['JavaScipt'];
+                            echo $_POST["JavaScipt"] . "<br/>";
+                        } ?></div>
+                    </div>
+                    <div class="formation">Formation </div>
+                    <div class="d-f"><?php
+                    echo $_POST["début"] . " - ";
+                    echo $_POST["fin"] . "<br/>"; ?></div>
+                    <div class="ff"><?php
+                    echo $_POST["formation"] . "<br/>"; ?></div>
+                    <div class="lieu"><?php
+                    echo $_POST["lieu"]; ?></div>
+                    <div class=v-line></div>
+                </div>
+                <div class="dis">
+                    <div class="date">
+                        <?php
+                        echo $_POST["début"] . " - ";
+                        echo $_POST["fin"] . "<br/>"; ?>
+                    </div>
+                    <div class="Poste">
+                        <?php
+                        echo $_POST["poste"] . "<br/>"; ?>
+                    </div>
+                    <?php
+                    echo $_POST["missions"] . "</br>";
+                    echo "Nom de l'entreprise<br>" . $_POST["entreprise"] . "<br/>";
+                    ?>
+                </div>
+            </div>
+        </div>
+        <script src="cv.js"></script>
 </body>
 </html>
